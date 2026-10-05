@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Cotact form for practice">
+        <title>Contact Form | Portfolio</title>
+    </head>
+    <body>
+        <h1>Contact Form</h1>
+        <form action="#" method="POST">
+            <label for="name">Name :</label>
+            <input type="text" name="name" id="name" required placeholder="John Doe">
+
+            <label for="email">Email :</label>
+            <input type="email" name="email" id="email" required placeholder="john@gmail.com">
+
+            <label for="phone">Phone No. :</label>
+            <input type="tel" name="phone" id="phone" required placeholder="8422026781">
+
+            <label for="DOB">Date of Birth</label>
+            <input type="date" name="DOB" id="DOB" required>
+
+            <label for="department">Select Department</label>
+            <select name="department" id="department">
+                <!-- <option name="department" value="">Select Department</option> -->
+                <option name="department" value="it">IT</option>
+                <option name="department" value="mis">MIS</option>
+                <option name="department" value="hr">HR</option>
+                <option name="department" value="finance">Finance</option>
+                <option name="department" value="other">Other</option>
+            </select>
+
+            <!-- <label for="type">Employment Type</label>
+            <select name="type" id="type">
+                <option name="type" id="type" value="">Select Employment Type</option>
+                <option name="type" id="type" value="full-time">Full Time</option>
+                <option name="type" id="type" value="part-time">Part Time</option>
+                <option name="type" id="type" value="contract">Contract</option>
+            </select> -->
+
+
+            <fieldset>
+                <legend>Employment Type</legend>
+                <label for="full-time">Full Time</label>
+                <input type="radio" id="full-time" name="type" value="full-time">
+
+            
+                <label for="part-time">part Time</label>
+                <input type="radio" id="part-time" name="type" value="part-time">
+
+            
+                <label for="contract">Contract</label>
+                <input type="radio" id="contract" name="type" value="contract">
+            </fieldset>
+            
+
+
+            <fieldset>
+                <legend> Select Your Skills</legend>
+
+                <label for="html">HTML</label>
+                <input type='checkbox' name="skills" id="html" value="html">
+
+                <label for="css">CSS</label>
+                <input type="checkbox" id="css" name="skills" value="css">
+
+                <label for="javascript">JavaScript</label>
+                <input type="checkbox" id="javascript" name="skills" value="javascript">
+
+                <label for="php">PHP</label>
+                <input type="checkbox" id="php" name="skills" value="php">
+
+                <label for="laravel">Laravel</label>
+                <input type="checkbox" id="laravel" name="skills" value="laravel">
+            </fieldset>
+
+            <label for="message">Message :</label>
+            <textarea name="message" id="message" rows="5" placeholder="Let's Connect"></textarea>
+
+            <label for="agree">I agree to the terms and conditions.</label>
+            <input type="checkbox" id="agree" name="agree" value="agree" required>
+
+            <button type="submit">Submit</button>
+
+            
+
+
+
+
+
+                
+
+
+        </form>
+    </body>
+</html>
