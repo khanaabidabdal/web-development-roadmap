@@ -10,13 +10,13 @@
         <h1>Contact Form</h1>
         <form action="#" method="POST">
             <label for="name">Name :</label>
-            <input type="text" name="name" id="name" required placeholder="John Doe">
+            <input type="text" name="name" id="name" autocomplete="Name" required placeholder="John Doe">
 
             <label for="email">Email :</label>
-            <input type="email" name="email" id="email" required placeholder="john@gmail.com">
+            <input type="email" name="email" id="email" autocomplete="Email" required placeholder="john@gmail.com">
 
             <label for="phone">Phone No. :</label>
-            <input type="tel" name="phone" id="phone" required placeholder="8422026781">
+            <input type="tel" name="phone" id="phone" autocomplete="8422026781" required placeholder="8422026781">
 
             <label for="DOB">Date of Birth</label>
             <input type="date" name="DOB" id="DOB" required>
@@ -30,15 +30,6 @@
                 <option name="department" value="finance">Finance</option>
                 <option name="department" value="other">Other</option>
             </select>
-
-            <!-- <label for="type">Employment Type</label>
-            <select name="type" id="type">
-                <option name="type" id="type" value="">Select Employment Type</option>
-                <option name="type" id="type" value="full-time">Full Time</option>
-                <option name="type" id="type" value="part-time">Part Time</option>
-                <option name="type" id="type" value="contract">Contract</option>
-            </select> -->
-
 
             <fieldset>
                 <legend>Employment Type</legend>
