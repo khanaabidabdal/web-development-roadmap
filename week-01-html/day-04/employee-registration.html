@@ -2,19 +2,19 @@
 <html lang="en">
     <head>
         <meta charset='UTF-8'>
-        <meta name="viewport content=width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Registration Form</title>
 
     </head>
     <body>
         <h1>Registration Form</h1>
 
-        <form action="" method="POST" enctype="multimedia/form-data">
+        <form action="" method="POST" enctype="multipart/form-data">
             <label for="name">Name :</label>
             <input type="text" name="name" id="name" minlength="10" maxlength="30" autocomplete="name" required placeholder="John Doe">
 
             <label for="dp">Profile Photo</label>
-            <input type="file" name="dp" id="dp" required accept="image/jpg,image/png">
+            <input type="file" name="dp" id="dp" required accept="image/jpeg,image/png">
 
             <label for="email">Email :</label>
             <input type="email" name="email" id="email" autocomplete="email" required placeholder="john@gmail.com">
@@ -26,15 +26,15 @@
             <input type="date" name="dob" id="dob" required>
 
             <label for="id">Employee ID</label>
-            <input type="number" min="1000" required placeholder="1010">
+            <input type="number" id="id" name="id" min="1000" required placeholder="1010">
 
             <label for="department">Department</label>
-            <select id="department" name="department">
-                <option value="" disabled>Select Department</option>
+            <select id="department" name="department" required>
+                <option value="" disabled selected>Select Department</option>
                 <option value="it">IT</option>
                 <option value="mis">MIS</option>
                 <option value="finance">Finance</option>
-                <option value="hr" selected>HR</option>
+                <option value="hr">HR</option>
                 <option value="sales">Sales</option>
                 <option value="purchase">Purchase</option>
             </select>
@@ -51,7 +51,7 @@
                 <input type="radio" id="part-time" name="emptype" value="part-time">
 
                 <label for="contract">Contract</label>
-                <input type="radio" id="contract" name="contract" value="contract">
+                <input type="radio" id="contract" name="emptype" value="contract">
             </fieldset>
 
             <fieldset>
@@ -68,11 +68,11 @@
                 <label for="php">PHP</label>
                 <input type="checkbox" id="php" name="skills" value="php">
 
-                <label for="laravel">JavaScript</label>
+                <label for="laravel">Laravel</label>
                 <input type="checkbox" id="laravel" name="skills" value="laravel">
 
                 <label for="mysql">MySQL</label>
-                <input type="checkbox" id="mysal" name="skills" value="mysql">
+                <input type="checkbox" id="mysql" name="skills" value="mysql">
 
 
             </fieldset>
