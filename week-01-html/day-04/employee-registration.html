@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport content=width=device-width, initial-scale=1.0">
+        <title>Registration Form</title>
+
+    </head>
+    <body>
+        <h1>Registration Form</h1>
+
+        <form action="" method="POST" enctype="multimedia/form-data">
+            <label for="name">Name :</label>
+            <input type="text" name="name" id="name" minlength="10" maxlength="30" autocomplete="name" required placeholder="John Doe">
+
+            <label for="dp">Profile Photo</label>
+            <input type="file" name="dp" id="dp" required accept="image/jpg,image/png">
+
+            <label for="email">Email :</label>
+            <input type="email" name="email" id="email" autocomplete="email" required placeholder="john@gmail.com">
+
+            <label for="phone">Phone No. :</label>
+            <input type="tel" name="phone" id="phone" autocomplete="tel" required placeholder="8422026781">
+
+            <label for="dob">Date of Birth :</label>
+            <input type="date" name="dob" id="dob" required>
+
+            <label for="id">Employee ID</label>
+            <input type="number" min="1000" required placeholder="1010">
+
+            <label for="department">Department</label>
+            <select id="department" name="department">
+                <option value="" disabled>Select Department</option>
+                <option value="it">IT</option>
+                <option value="mis">MIS</option>
+                <option value="finance">Finance</option>
+                <option value="hr" selected>HR</option>
+                <option value="sales">Sales</option>
+                <option value="purchase">Purchase</option>
+            </select>
+
+            <label for="position">Position</label>
+            <input type="text" name="position" id="position" required value="Senior Clerk" readonly>
+
+            <fieldset>
+                <legend>Select Employment Type</legend>
+                <label for="full-time">Full Time</label>
+                <input type="radio" id="full-time" name="emptype" value="full-time">
+
+                <label for="part-time">Part Time</label>
+                <input type="radio" id="part-time" name="emptype" value="part-time">
+
+                <label for="contract">Contract</label>
+                <input type="radio" id="contract" name="contract" value="contract">
+            </fieldset>
+
+            <fieldset>
+                <legend>Select your Skills</legend>
+                <label for="html">HTML</label>
+                <input type="checkbox" id="html" name="skills" value="html" checked>
+
+                <label for="css">CSS</label>
+                <input type="checkbox" id="css" name="skills" value="css" checked>
+
+                <label for="javascript">JavaScript</label>
+                <input type="checkbox" id="javascript" name="skills" value="javascript">
+
+                <label for="php">PHP</label>
+                <input type="checkbox" id="php" name="skills" value="php">
+
+                <label for="laravel">JavaScript</label>
+                <input type="checkbox" id="laravel" name="skills" value="laravel">
+
+                <label for="mysql">MySQL</label>
+                <input type="checkbox" id="mysal" name="skills" value="mysql">
+
+
+            </fieldset>
+
+            <label for="exp">Years of Experience :</label>
+            <input type="number" min="3" max="20" id="exp" name="exp" required placeholder="10">
+
+            <label for="username">Username :</label>
+            <input type="text" id="username" name="username" required placeholder="khanaabidabdal">
+
+            <label for="password">Password :</label>
+            <input type="password" minlength="8" required name="password" id="password" aria-describedby="password-hint">
+            <p id="password-hint">Password Must contain atleast 8 Characters.</p>
+
+            <label for="agree">I agree to the company policies.</label>
+            <input type="checkbox" id="agree" name="agree" required>
+
+            <button type="submit">Submit</button>
+
+
+
+        </form>
+    </body>
+    
+</html>
