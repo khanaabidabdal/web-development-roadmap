@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact | Aabid's Portfolio</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1>Contact Form</h1>
+        <form action="" method="POST">
+            <label for="name">Name :</label>
+            <input type="text" name="name" id="name" minlength="5" maxlength="35" autocomplete="name" placeholder="John Doe" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" name="subject" id="subject">
+
+            <label for="msg">Message:</label>
+            <textarea name="msg" id="msg" rows="5" placeholder="Let's connect" required></textarea>
+
+            <fieldset>
+                <legend>Preferred Contact:</legend>
+
+                <label for="email">Email :</label>
+                <input type="radio" name="contact" id="email" autocomplete="email">
+
+                <label for="phone">Phone :</label>
+                <input type="radio" name="contact" id="phone" autocomplete="tel">
+            </fieldset>
+
+            <button type="submit">Submit</button>
+
+
+            
+        </form>
+        <footer>
+            <p>&copy; 2026 All Rights Reserved.</p>
+        </footer>
+    </body>
+</html>
