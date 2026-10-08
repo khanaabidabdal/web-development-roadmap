@@ -2,12 +2,26 @@
 
 My 16-week full-stack development learning journey.
 
-## Current Progress
+## Week 1 — HTML5 and Git/GitHub
 
-- Week 1 — HTML5 and Git
-- Day 1 — HTML Foundations
-- Day 2 — Semantic HTML, Forms and Accessibility
-- Day 3 — Advanced HTML and Git Fundamentals
+Learn the fundamentals of HTML5, semantic elements,
+forms, accessibility, browser debugging, and Git.
+
+### Learning Resources
+- [Complete Week 1 Notes](week-01-html/notes.md)
+- [HTML Portfolio](week-01-html/day-05/index.html)
+
+### Topics Covered
+- HTML document structure
+- Semantic HTML5
+- Forms and validation
+- Tables and multimedia
+- Accessibility and SEO
+- Git and GitHub
+- Branching and merging
+- HTML debugging
+
+**Status:** Completed
 
 ## Target Stack
 
