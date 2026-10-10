@@ -9,7 +9,7 @@ body {
     color:#1f2937
 }
 
-header{
+.site-header{
     background-color: #14213d;
     color:white;
     padding:20px
@@ -28,22 +28,35 @@ main {
     padding:20px;
 }
 
-h1{
+.page-title{
     color:#14213d;
     font-size:36px
 }
 
-section{
-    background-color: white;
-    padding:24px;
-    margin-bottom:20px;
-    border:1px solid #e5e7eb;
-    border-radius:8px;
+#hero {
+    border-left: 4px solid #2563eb;
 }
 
-footer{
+.footer{
     background-color: #14213d;
     color:white;
     text-align:center;
     padding:16px;
+}
+
+nav a:hover{
+    color:#fbbf24;
+}
+
+nav a:focus-visible{
+    outline: 2px solid #fbbf24;
+    outline-offset: 4px;
+}
+
+.content-card{
+    background-color: white;
+    padding:24px;
+    margin-bottom: 20px;
+    border:1px solid #e5e7eb;
+    border-radius:8px;
 }
