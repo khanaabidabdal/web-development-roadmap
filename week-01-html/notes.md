@@ -1,34 +1,35 @@
-# Week 1 — HTML5 and Git/GitHub: Complete Study Notes
+# Week 1 — HTML5, Web Fundamentals & Git
 
-> **16-Week Full-Stack Development Roadmap · Week 1**  
-> Days 1–6 lessons and Day 7 revision. HTML forms in these exercises require a backend to process submissions.
+**Full-Stack Web Development Roadmap | Technical Notes**
 
-## Contents
+These notes provide a standalone reference for the first week of the course. Follow the lessons in order, implement the examples yourself, and use [`questions.md`](questions.md) for independent practice. The six learning days are followed by a rest day; revision is optional.
 
-- [Day 1: Web Foundations And Basic Html](#day-1-web-foundations-and-basic-html)
-- [Day 2: Semantic Html, Forms And Accessibility](#day-2-semantic-html-forms-and-accessibility)
-- [Day 3: Advanced Html And First Git/Github Workflow](#day-3-advanced-html-and-first-gitgithub-workflow)
-- [Day 4: Professional Forms And Git Branching](#day-4-professional-forms-and-git-branching)
-- [Day 5: Four-Page Portfolio And Git Diffs](#day-5-four-page-portfolio-and-git-diffs)
-- [Day 6: Validation, Accessibility, Debugging And Review](#day-6-validation-accessibility-debugging-and-review)
-- [Day 7: Rest + Revision Plan (Optional, 30–45 Minutes)](#day-7-rest--revision-plan-optional-3045-minutes)
-- [Self-check quiz](#self-check-quiz)
-
-
-## Purpose
-
-These notes summarize the Week 1 curriculum (Days 1–6) and provide a Day 7 revision guide. They are designed to be understandable without access to the original lessons. HTML examples are illustrative; real contact/registration forms need a backend before they can save or send data.
+> **Scope:** HTML-only forms do not save records without a backend. Browser-side validation improves usability but never replaces server-side validation and authorization.
 
 ## Learning outcomes
 
-- Explain how browsers, DNS, HTTP(S), servers, HTML and the DOM fit together.
-- Write valid, semantic, accessible multipage HTML documents.
-- Build links, images, lists, data tables and forms with meaningful labels.
-- Understand browser validation versus mandatory server-side validation.
-- Inspect pages and diagnose broken links, images and invalid markup.
-- Use Git staging, commits, branches, merges, remotes, diffs and restoration safely.
-- Build and review a four-page HTML portfolio.
+By the end of this module, learners should be able to:
 
+- Describe DNS, HTTP(S), web servers, HTML parsing, and the DOM.
+- Build structured, semantic, accessible multi-page HTML documents.
+- Create lists, links, images, data tables, and properly labeled forms.
+- Explain form submission, browser validation, and server trust boundaries.
+- Inspect markup and diagnose broken paths and common accessibility issues.
+- Use Git commits, staging, branches, merges, diffs, remotes, and safe restoration.
+- Build and validate a four-page HTML portfolio.
+
+## Lesson navigation
+
+- [Day 1 — Web foundations and basic HTML](#day-1-web-foundations-and-basic-html)
+- [Day 2 — Semantic HTML, forms and accessibility](#day-2-semantic-html-forms-and-accessibility)
+- [Day 3 — Advanced HTML and first Git workflow](#day-3-advanced-html-and-first-gitgithub-workflow)
+- [Day 4 — Professional forms and Git branching](#day-4-professional-forms-and-git-branching)
+- [Day 5 — Four-page portfolio and Git diffs](#day-5-four-page-portfolio-and-git-diffs)
+- [Day 6 — Validation, accessibility, debugging and review](#day-6-validation-accessibility-debugging-and-review)
+- [Day 7 — Rest (optional revision)](#day-7-rest-optional-revision)
+- [Practice questions and assignments](questions.md)
+
+---
 
 ## Day 1: Web Foundations And Basic Html
 
@@ -582,7 +583,7 @@ untracked nonignored files pending locally.
 Review changes before staging; review staged patch before committing.
 
 
-## Day 7: Rest + Revision Plan (Optional, 30–45 Minutes)
+## Day 7: Rest (Optional Revision)
 
 - 10 min: Explain HTML source vs DOM, head vs body, semantic elements.
 - 10 min: Rebuild a small form from memory (label/id/name/value, radio).
@@ -590,87 +591,8 @@ Review changes before staging; review staged patch before committing.
 - 10 min: Inspect four-page portfolio and GitHub README.
 Take a full rest day if needed. No CSS is required until Week 2.
 
+---
 
-## Self-check quiz
+## Further practice
 
-
-1. Why does HTML need a doctype?
-
-
-2. What are head, body, title, charset and viewport for?
-
-
-3. When should you use article vs section vs div?
-
-
-4. Why should tables not be used for layout?
-
-
-5. What is the difference between id, name and value?
-
-
-6. Why must radio options share a name but have distinct values?
-
-
-7. Why is a placeholder not a substitute for a label?
-
-
-8. What does multipart/form-data do?
-
-
-9. What is the difference between readonly and disabled?
-
-
-10. Why must server validation run even if HTML validation passes?
-
-
-11. Why can source HTML differ from the browser DOM?
-
-
-12. How do relative links work across directories?
-
-
-13. What do git add, commit and push each do?
-
-
-14. What is a branch? What is a fast-forward merge?
-
-
-15. Compare git diff, git diff --staged and git diff HEAD.
-
-
-16. Compare git restore and git restore --staged.
-
-
-17. Why is a clean working tree different from being up to date with origin?
-
-
-18. What does the HTML validator check, and what can't it guarantee?
-
-
-19. Why test keyboard navigation?
-
-
-20. What should a README tell a new learner?
-
-
-
-## Suggested repository README section
-
-Copy this excerpt into the repository root `README.md`:
-
-```markdown
-## Week 1 — HTML5 + Git/GitHub
-Built a semantic four-page HTML portfolio, employee table and registration
-form. Practiced accessible labels, validation, relative navigation, Git
-branches, commits, diffs and debugging.
-- [Complete Week 1 notes](week-01-html/notes.md)
-- [Portfolio home](week-01-html/day-05/index.html)
-- [Portfolio projects](week-01-html/day-05/projects.html)
-The portfolio is HTML-only; styling starts in Week 2. Forms require a
-backend to process submissions.
-```
-
-## Next: Week 2
-
-CSS3, selectors, cascade, specificity, box model, layout, Flexbox, Grid and responsive design.
+Use [questions.md](questions.md) for theory, coding tasks, debugging challenges, Git exercises, and a final assessment. Refer to [the repository README](../README.md) for the complete roadmap.
