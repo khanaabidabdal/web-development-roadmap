@@ -115,7 +115,7 @@ main {
 /* 6. Reusable components */
 .content-card {
     background-color: var(--color-surface);
-    padding: 0.5rem;
+    padding: 0.75rem;
     margin-bottom: 1.25rem;
     border: 1px solid #e5e7eb;
     border-radius: 0.75rem;
@@ -165,9 +165,9 @@ main {
 
 
 /* 8. Responsive adjustments */
-@media(max-width: 687px) {
+@media(min-width: 768px) {
     .content-card {
-        padding: 1.7rem;
+        padding: 1.75rem;
     }
 }
 
