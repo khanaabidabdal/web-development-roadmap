@@ -64,7 +64,7 @@ if((role==='Finance Manager' || role==='Admin') && isActivee==true){
 // Hint: Research or experiment with the string method .trim().
 
 
-let employeeName = "Aabid"; 
+let employeeName = "Aabid";
 
 // 1. Remove spaces from the edges
 const cleanedName = employeeName.trim();

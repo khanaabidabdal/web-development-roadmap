@@ -6,7 +6,6 @@
 for (let i = 1; i <= 10; i++) {
   // 1. Convert the number (i) to a string
   let numberAsString = String(i);
-  
   // 2. Pad the start with zeros until it is 3 digits long
   let paddedNumber = numberAsString.padStart(3, "0");
   
@@ -29,7 +28,7 @@ let totalPayroll = 0;
 
 // 3. Use a loop to add each salary to the total
 for (let salary of salaries) {
-  totalPayroll += salary; 
+  totalPayroll += salary;
 }
 
 // 4. Calculate the average salary
@@ -74,7 +73,6 @@ for (let i = 0; i < statuses.length; i++) {
   if (statuses[i] === "Inactive") {
     continue;
   }
-  
   // Print the human-readable position (index + 1)
   console.log(i + 1);
 }

@@ -74,7 +74,7 @@ function canAccessFinancialReport(role,isActive){
     if((role==='Admin' || role==='Finance Manager') && isActive){
         return true
     } else {
-        return false 
+        return false
     }
 }
 console.log(canAccessFinancialReport('Admin',true));

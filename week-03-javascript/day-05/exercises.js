@@ -1,6 +1,6 @@
 // Exercise 1 — Array operations
 // Create an array containing three department names. 
-// Add one department using push(), remove the last department using pop(), 
+// Add one department using push(), remove the last department using pop(),
 // and check whether "IT" exists using includes(). Print the results.
 
 const arr=['IT','Finance','Purchase'];
