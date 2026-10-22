@@ -15,7 +15,7 @@ button.addEventListener('click',function(){
     } else {
         message.textContent='';
         button.textContent = 'Show Employee Details';
-    }   
+    }
 });
 
 // Exercise 2 — Live employee name preview
@@ -66,8 +66,6 @@ statusButton.addEventListener('click',function(){
     } else {
         statusText.textContent='Status:Inactive';
         statusButton.textContent='Activate';
-
-        
         statusText.classList.add('inactive');
         statusText.classList.remove('active');
 
@@ -103,9 +101,8 @@ let value=0;
 
 count.addEventListener('click',()=>{
     value++;
-    display.textContent=value;  
+    display.textContent=value;
 });
-
 reset.addEventListener('click',()=>{
     value=0;
     display.textContent=value;
