@@ -35,7 +35,6 @@ form.addEventListener('submit', (event) => {
     let isValid = true;
 
     // Exercise 3: Custom Field-by-Field Validation Logic
-    
     // Name Validation
     if (nameInput.value.trim() === '') {
         nameError.textContent = 'Employee name is required.';
@@ -132,8 +131,7 @@ form.addEventListener('submit', (event) => {
 
         // Challenge: Store object in session array and update counter UI
         registeredEmployees.push(employeeData);
-        document.getElementById('session-counter').textContent = 
-            `Total Employees Registered This Session: ${registeredEmployees.length}`;
+        document.getElementById('session-counter').textContent =`Total Employees Registered This Session: ${registeredEmployees.length}`;
 
         // Exercise 4: Safe display in summary card using textContent
         document.getElementById('summary-name').textContent = employeeData.name;
