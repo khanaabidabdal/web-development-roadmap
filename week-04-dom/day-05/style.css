@@ -1,0 +1,199 @@
+/* Base Resets & Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+#heading {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Counter Style */
+#count {
+    margin-top: 1rem;
+    font-weight: 500;
+    color: #7f8c8d;
+}
+#count::before {
+    content: "Total Employees: ";
+    color: #333;
+    font-weight: 600;
+}
+
+#edit-section[hidden] {
+    display: none;
+}
+
+/* Table Layout */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background-color: #2c3e50;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Action Cell Buttons Layout */
+td:last-child {
+    display: flex;
+    gap: 8px;
+}
+
+/* Button Base Styles */
+button {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* Contextual Button Colors */
+button[data-action="edit"], button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+}
+
+button[data-action="edit"]:hover, button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+button[data-action="toggle"] {
+    background-color: #f39c12;
+    color: white;
+}
+
+button[data-action="toggle"]:hover {
+    background-color: #d35400;
+}
+
+button[data-action="delete"] {
+    background-color: #e74c3c;
+    color: white;
+}
+
+button[data-action="delete"]:hover {
+    background-color: #c0392b;
+}
+
+#cancel-edit {
+    background-color: #95a5a6;
+    color: white;
+}
+
+#cancel-edit:hover {
+    background-color: #7f8c8d;
+}
+
+/* Optional color hooks matching the text output of your JS logic */
+.status-active {
+    color: #27ae60;
+}
+
+.status-inactive {
+    color: #dd0b0b;
+}
+
+/* Edit Section Modal / Panel Layout */
+#edit-section {
+    margin-top: 2rem;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #3498db;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+#edit-section h2 {
+    margin-bottom: 1.25rem;
+    color: #2c3e50;
+    font-size: 1.25rem;
+}
+
+/* Form Controls Layout */
+#edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+}
+
+#edit-form label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-bottom: -0.5rem;
+}
+
+#edit-form input[type="text"],
+#edit-form select {
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    width: 100%;
+    outline: none;
+}
+
+#edit-form input[type="text"]:focus,
+#edit-form select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Edit Section Action Buttons Container */
+#edit-form button {
+    padding: 10px;
+    font-size: 0.95rem;
+}
+
+/* Simple fade animation when edit pane exposes itself */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

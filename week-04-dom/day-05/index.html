@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Dynamic HTML Table</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <h1 id="heading">Employee Table</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody id="employee-table-body"></tbody>
+        </table>
+        <p id="count"></p>
+
+        <section id="edit-section" hidden>
+            <h2>Edit Employee</h2>
+
+            <form id="edit-form">
+                <input type="hidden" id="edit-id">
+
+                <label for="edit-name">Employee Name</label>
+                <input type="text" id="edit-name" required minlength="3">
+
+                <label for="edit-department">Department</label>
+                <select id="edit-department" required>
+                    <option value="IT">IT</option>
+                    <option value="Finance">Finance</option>
+                    <option value="HR">HR</option>
+                </select>
+
+                <button type="submit">Save Changes</button>
+                <button type="button" id="cancel-edit">Cancel</button>
+            </form>
+        </section>
+    </body>
+</html>
