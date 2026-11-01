@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="The Employee Management Using JavaScript">
+        <title>Employee Management Dashboard</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1 id="main-heading">Employee Management System</h1>
+        </header>
+        <main>
+            <section id="dashboard" aria-label="Employee statistics">
+                <div class="stat-card">
+                    <p>Total Employees</p>
+                    <span id="total-count">0</span>
+                </div>
+                <div class="stat-card">
+                    <p>Active Count</p>
+                    <span id="active-count">0</span>
+                </div>
+                <div class="stat-card">
+                    <p>Inactive Count</p>
+                    <span id="inactive-count">0</span>
+                </div>
+            </section>
+            <section id="registration-section">
+                <form id="registration-form">
+                    <h2>Register employee</h2>
+                    <label for="employee-name">Name:</label>
+                    <input type="text" id="employee-name" name="employee-name" required placeholder="Ahmed" minlength="3">
+
+                    <label for="employee-department">Department:</label>
+                    <select id="employee-department" name="employee-department" required>
+                        <option value="" selected disabled>Select Department</option>
+                        <option value="IT">IT</option>
+                        <option value="Finance">Finance</option>
+                        <option value="HR">HR</option>
+                    </select>
+                    <button type="submit">Register</button>
+
+                    
+                </form>
+            </section>
+            <section id="employee-directory">
+                <h2>Search Employee</h2>
+                <div id="search-employee">
+                    <label for="search-input">Search</label>
+                    <input type="search" id="search-input" name="search-input" placeholder="Search Employee">
+
+                    <label for="status-filter">Status</label>
+                    <select id="status-filter" name="status-filter">
+                        <option value="all" selected>All</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                    </select>
+
+                    <label for="department-filter">Departments</label>
+                    <select id="department-filter" name="department-filter">
+                        <option value="all" selected>All</option>
+                        <option value="IT">IT</option>
+                        <option value="Finance">Finance</option>
+                        <option value="HR">HR</option>
+                    </select>
+                </div>
+            </section>
+            <section id="table-data">
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Department</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employee-table-body"></tbody>
+                </table>
+                <p id="empty-message" hidden></p>
+            </section>
+            <section id="edit-section" hidden>
+                <h2>Edit Employee</h2>
+                <form id="edit-form">
+                    <input type="hidden" id="edit-id">
+
+                    <label for="edit-name">Employee Name</label>
+                    <input type="text" id="edit-name" name="edit-name" minlength="3" required>
+
+                    <label for="edit-department">Department</label>
+                    <select id="edit-department" name="edit-department" required>
+                        <option value="IT">IT</option>
+                        <option value="Finance">Finance</option>
+                        <option value="HR">HR</option>
+                    </select>
+
+                    <button type="submit" id="submit-btn">Save Changes</button>
+                    <button type="button" id="edit-cancel">Cancel</button>
+
+                </form>
+            </section>
+
+        </main>
+    </body>
+</html>

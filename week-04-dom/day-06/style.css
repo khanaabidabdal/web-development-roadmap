@@ -1,0 +1,263 @@
+
+/* 1. Reset and variables */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #2563eb;
+    --background: #f8fafc;
+    --white: #ffffff;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #cbd5e1;
+    --success: #16a34a;
+    --danger: #dc2626;
+    --warning: #d97706;
+}
+
+/* 2. Page layout - Mobile first */
+body {
+    font-family: system-ui, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.5;
+    padding: 1rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#main-heading {
+    font-size: 1.75rem;
+    color: var(--primary);
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* 3. Sections */
+section {
+    background: var(--white);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px #00000012;
+}
+
+section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+/* 4. Forms - Stacked on mobile */
+form,
+#search-employee {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-weight: 500;
+}
+
+input,
+select,
+button {
+    font: inherit;
+    width: 100%;
+    padding: 0.65rem;
+    border-radius: 8px;
+}
+
+input,
+select {
+    border: 1px solid var(--border);
+    background: var(--white);
+    color: var(--text);
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button[type="submit"],
+#submit-btn {
+    background: var(--primary);
+    color: white;
+}
+
+button[type="submit"]:hover,
+#submit-btn:hover {
+    background: #1d4ed8;
+}
+
+#edit-cancel {
+    background: #e2e8f0;
+    color: var(--text);
+}
+
+/* 5. Dashboard statistics */
+#dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+
+.stat-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 5px solid var(--primary);
+    box-shadow: 0 2px 6px #00000012;
+}
+
+.stat-card:nth-child(2) {
+    border-left-color: var(--success);
+}
+
+.stat-card:nth-child(3) {
+    border-left-color: var(--warning);
+}
+
+.stat-card p {
+    color: var(--muted);
+    font-size: 0.875rem;
+}
+
+.stat-card span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* 6. Employee table */
+#table-data {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    background: var(--background);
+    color: var(--muted);
+    font-size: 0.875rem;
+}
+
+tbody tr:hover {
+    background: var(--background);
+}
+
+/* 7. Status badges and buttons */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.badge.active {
+    background: #dcfce7;
+    color: var(--success);
+}
+
+.badge.inactive {
+    background: #fee2e2;
+    color: var(--danger);
+}
+
+.action-btn {
+    width: auto;
+    padding: 0.4rem 0.7rem;
+    margin: 0.15rem;
+    font-size: 0.85rem;
+    background: #e2e8f0;
+}
+
+/* 8. Empty state */
+#empty-message {
+    text-align: center;
+    padding: 2rem;
+    color: var(--muted);
+}
+
+/* Hide elements when needed */
+[hidden] {
+    display: none !important;
+}
+
+/* 9. Tablet and desktop */
+@media (min-width: 768px) {
+    body {
+        padding: 1.5rem;
+    }
+
+    #main-heading {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    #dashboard {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    form,
+    #search-employee {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+
+    form label,
+    #search-employee label {
+        flex: 1 1 200px;
+    }
+
+    form button {
+        width: auto;
+    }
+}
