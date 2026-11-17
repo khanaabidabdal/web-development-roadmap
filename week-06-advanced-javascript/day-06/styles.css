@@ -1,0 +1,262 @@
+:root{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+    color:#1e293b;
+    background:#f1f5f9;
+    font-synthesis: none;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    min-height: 100vh;
+}
+
+button,input,select,textarea{
+    font:inherit;
+}
+
+button{
+    cursor: pointer;
+}
+
+.app-container{
+    width: min(100% - 2rem, 900px);
+    margin:3rem auto;
+}
+
+.app-header{
+    margin-bottom: 2rem;
+}
+
+.app-header h1{
+    margin:0;
+    font-size: clamp(2rem,5vw,3rem);
+    color:#0f172a;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap:1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card,
+.task-form-section,
+.task-list-section{
+    background:#fff;
+    border:1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 12px rgb(15 23 42/4%);
+}
+
+.stat-card span{
+    display:block;
+    font-size:2rem;
+    font-weight: 700;
+    color:#2563eb;
+}
+
+.stat-card p{
+    margin:0.3rem 0 0;
+    color:#64748b;
+}
+
+.task-form-section{
+    margin-bottom:2rem;
+}
+
+h2{
+    margin-top:0;
+    font-size:1.25rem;
+}
+
+.form-group{
+    display:flex;
+    flex-direction: column;
+    gap:0.5rem;
+    margin-bottom:1.25rem;
+}
+
+.form-group label,
+.task-controls label{
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:0.75rem;
+    border:1px solid #cbd5e1;
+    border-radius: 8px;
+    background:#fff;
+    color:#1e293b;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+button:focus-visible{
+    outline:3px solid #93c5fd;
+    outline-offset:2px;
+}
+
+.form-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.75rem;
+}
+
+button{
+    border:0;
+    border-radius: 8px;
+    background: #2563eb;
+    color:#fff;
+    padding:0.75rem 1.25rem;
+    font-weight: 600;
+}
+
+button:hover{
+    background: #1d4ed8;
+}
+
+.secondary-btn {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.secondary-btn:hover {
+    background: #cbd5e1;
+}
+
+.error-message {
+    color: #b91c1c;
+    margin-bottom: 0;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.task-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.task-controls select {
+    width: auto;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.task-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.task-item.completed {
+    background: #f8fafc;
+}
+
+.task-item.completed .task-title {
+    text-decoration: line-through;
+    color: #64748b;
+}
+
+.task-title {
+    margin: 0 0 0.5rem;
+    overflow-wrap: anywhere;
+}
+
+.task-description {
+    margin: 0 0 0.5rem;
+    color: #64748b;
+    overflow-wrap: anywhere;
+}
+
+.task-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.task-actions button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+}
+
+.priority-high {
+    color: #b91c1c;
+}
+
+.priority-medium {
+    color: #a16207;
+}
+
+.priority-low {
+    color: #15803d;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 2rem 0;
+    color: #64748b;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    .app-container {
+        margin: 1.5rem auto;
+    }
+
+    .stats {
+        gap: 0.5rem;
+    }
+
+    .stat-card {
+        padding: 0.75rem;
+    }
+
+    .stat-card span {
+        font-size: 1.5rem;
+    }
+
+    .stat-card p {
+        font-size: 0.75rem;
+    }
+
+    .task-item {
+        flex-direction: column;
+    }
+
+    .task-controls {
+        width: 100%;
+    }
+}
