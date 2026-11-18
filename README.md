@@ -2,7 +2,7 @@
 
 **A free, 16-week, project-based learning resource covering frontend development, backend engineering, databases, APIs, testing, and deployment.**
 
-> **Progress:** Weeks 01–04 completed · **Next:** Week 05 — Asynchronous JavaScript & APIs
+> **Progress:** Weeks 01–06 completed (6/16, 37.5%) · **Next:** Week 07 — TypeScript
 
 ## Why I created this repository
 
@@ -35,9 +35,9 @@ Each week has **six study days and one rest/revision day**. The schedule is a gu
 | 02 | CSS3, Flexbox, Grid & responsive design | Complete |
 | 03 | JavaScript fundamentals | Complete |
 | 04 | DOM manipulation, browser events & interactive interfaces | Complete |
-| 05 | Asynchronous JavaScript & APIs | Next |
-| 06 | Advanced Git, npm & tooling | Planned |
-| 07 | TypeScript | Planned |
+| 05 | Asynchronous JavaScript & APIs | Complete |
+| 06 | Advanced JavaScript & application architecture | Complete |
+| 07 | TypeScript | Next |
 | 08 | React fundamentals | Planned |
 | 09 | Advanced React | Planned |
 | 10 | Modern PHP | Planned |
@@ -56,6 +56,8 @@ Each week has **six study days and one rest/revision day**. The schedule is a gu
 | Week 02 | Responsive layouts with CSS, Flexbox, Grid, and media queries | [CSS exercises](week-02-css/) |
 | Week 03 | JavaScript language fundamentals and problem-solving | [JavaScript exercises](week-03-javascript/) |
 | Week 04 | DOM updates, event delegation, forms, CRUD operations, searching, and filtering | [DOM exercises](week-04-dom/) |
+| Week 05 | Event loop, Promises, `async`/`await`, Fetch API, request cancellation, and product catalog | [Async JavaScript & API exercises](week-05-async-apis/) |
+| Week 06 | ES modules, closures, separation of concerns, immutable reducers, validation, persistence, and TaskFlow | [Advanced JavaScript exercises](week-06-advanced-javascript/) |
 
 ### Featured project: Interactive dashboard (Week 04)
 
@@ -65,23 +67,33 @@ The records are stored in a JavaScript array in memory; this is **not** a persis
 
 **Explore:** [Week 04 module](week-04-dom/) · [Dashboard source](week-04-dom/day-06/)
 
+### Featured project: Product Catalog (Week 05)
+
+The Week 05 project explores asynchronous browser applications using the Fetch API and DummyJSON. It includes product search, category filtering, price sorting, a native dialog for product details, and loading, empty, and error states. Request cancellation and stale-response checks help prevent outdated search results from replacing newer ones. Filtering and sorting apply to the currently downloaded dataset; this is a learning project, not a production-scale catalog.
+
+**Explore:** [Week 05 module](week-05-async-apis/) · [Product Catalog source](week-05-async-apis/day-06/)
+
+### Featured project: TaskFlow (Week 06)
+
+TaskFlow is a modular vanilla JavaScript task manager with task creation, editing, completion toggling, deletion, filtering, sorting, statistics, validation, and `localStorage` persistence. Its modules separate event coordination, state management, pure reducer transitions, rendering, input validation, and defensive storage parsing. Manual lifecycle and reducer checks were performed; an automated test suite remains a future improvement.
+
+**Explore:** [Week 06 module](week-06-advanced-javascript/) · [TaskFlow source](week-06-advanced-javascript/day-06/)
+
 ## Repository organization
 
 ```text
 web-development-roadmap/
 ├── README.md
 ├── week-01-html/
-│   └── day-XX/                  # HTML exercises and supporting materials
 ├── week-02-css/
-│   └── day-XX/                  # CSS exercises and supporting materials
 ├── week-03-javascript/
-│   └── day-XX/                  # JavaScript exercises and supporting materials
-└── week-04-dom/
-    ├── README.md               # Module overview
-    ├── notes.md                # Technical reference
-    ├── questions.md            # Knowledge checks
-    ├── exercises.md            # Practice and revision guide
-    └── day-01/ ... day-06/     # Daily work, including the dashboard
+├── week-04-dom/
+├── week-05-async-apis/
+│   ├── README.md, notes.md, questions.md, exercises.md
+│   └── day-01/ ... day-06/     # Async exercises and Product Catalog
+└── week-06-advanced-javascript/
+    ├── README.md, notes.md, questions.md, exercises.md
+    └── day-01/ ... day-06/     # Architecture exercises and TaskFlow
 ```
 
 *The tree is a high-level guide, not an exhaustive file listing. Documentation availability may vary by module.*
@@ -93,6 +105,12 @@ web-development-roadmap/
 - [Week 03 — JavaScript fundamentals](week-03-javascript/)
 - [Week 04 — DOM and browser JavaScript](week-04-dom/)
 - [Week 04 — Interactive dashboard](week-04-dom/day-06/)
+- [Week 05 — Asynchronous JavaScript & APIs](week-05-async-apis/)
+- [Week 05 — Product Catalog](week-05-async-apis/day-06/)
+- [Week 06 — Advanced JavaScript & application architecture](week-06-advanced-javascript/)
+- [Week 06 — TaskFlow](week-06-advanced-javascript/day-06/)
+
+**Next module:** Week 07 — TypeScript (not yet published).
 
 ## Engineering and AI-assisted learning approach
 
