@@ -1,8 +1,9 @@
+
 # Full-Stack Web Development Roadmap
 
 **A free, 16-week, project-based learning resource covering frontend development, backend engineering, databases, APIs, testing, and deployment.**
 
-> **Progress:** Weeks 01–06 completed (6/16, 37.5%) · **Next:** Week 07 — TypeScript
+> **Progress:** Weeks 01–07 implemented (7/16, 43.75%) · **Next:** Week 08 — React Fundamentals
 
 ## Why I created this repository
 
@@ -37,8 +38,8 @@ Each week has **six study days and one rest/revision day**. The schedule is a gu
 | 04 | DOM manipulation, browser events & interactive interfaces | Complete |
 | 05 | Asynchronous JavaScript & APIs | Complete |
 | 06 | Advanced JavaScript & application architecture | Complete |
-| 07 | TypeScript | Next |
-| 08 | React fundamentals | Planned |
+| 07 | TypeScript | Complete |
+| 08 | React fundamentals | Next |
 | 09 | Advanced React | Planned |
 | 10 | Modern PHP | Planned |
 | 11 | SQL & MySQL | Planned |
@@ -47,6 +48,8 @@ Each week has **six study days and one rest/revision day**. The schedule is a gu
 | 14 | Full-stack integration | Planned |
 | 15 | Deployment, Linux, web servers, Docker & CI/CD | Planned |
 | 16 | Full-stack capstone, portfolio & interviews | Planned |
+
+Completion refers to implementation, testing, and documentation milestones rather than mastery of every concept.
 
 ## What has been built so far
 
@@ -58,6 +61,7 @@ Each week has **six study days and one rest/revision day**. The schedule is a gu
 | Week 04 | DOM updates, event delegation, forms, CRUD operations, searching, and filtering | [DOM exercises](week-04-dom/) |
 | Week 05 | Event loop, Promises, `async`/`await`, Fetch API, request cancellation, and product catalog | [Async JavaScript & API exercises](week-05-async-apis/) |
 | Week 06 | ES modules, closures, separation of concerns, immutable reducers, validation, persistence, and TaskFlow | [Advanced JavaScript exercises](week-06-advanced-javascript/) |
+| Week 07 | Type inference, interfaces, unions, generics, narrowing, runtime validation, API contracts, and TypeScript application migration | [TypeScript exercises](week-07-typescript/) |
 
 ### Featured project: Interactive dashboard (Week 04)
 
@@ -75,15 +79,52 @@ The Week 05 project explores asynchronous browser applications using the Fetch A
 
 ### Featured project: TaskFlow (Week 06)
 
-TaskFlow is a modular vanilla JavaScript task manager with task creation, editing, completion toggling, deletion, filtering, sorting, statistics, validation, and `localStorage` persistence. Its modules separate event coordination, state management, pure reducer transitions, rendering, input validation, and defensive storage parsing. Manual lifecycle and reducer checks were performed; an automated test suite remains a future improvement.
+TaskFlow is a modular vanilla JavaScript task manager with task creation, editing, completion toggling, deletion, filtering, sorting, statistics, validation, and `localStorage` persistence. Its modules separate event coordination, state management, pure reducer transitions, rendering, input validation, and defensive storage parsing.
+
+Manual lifecycle and reducer checks were performed for this original JavaScript implementation. Automated reducer and store testing was subsequently introduced in the Week 07 TypeScript version.
 
 **Explore:** [Week 06 module](week-06-advanced-javascript/) · [TaskFlow source](week-06-advanced-javascript/day-06/)
+
+### Featured project: TaskFlow — TypeScript Edition (Week 07)
+
+The Week 07 project migrates the original TaskFlow application from JavaScript to TypeScript while preserving its functionality, modular architecture, and interface.
+
+The migration introduces:
+
+- Strict TypeScript compiler configuration.
+- Shared interfaces and application contracts.
+- Literal types and discriminated action unions.
+- Generic state management.
+- Immutable reducer transitions.
+- Runtime validation and custom type guards.
+- Defensive local storage parsing.
+- Type-safe DOM manipulation.
+- Dedicated browser compilation configuration.
+- Automated reducer and store assertions.
+
+The original JavaScript implementation remains available for comparison. The TypeScript version uses a separate local storage key to avoid overwriting the original application's data.
+
+#### Verification results
+
+| Verification | Result |
+| --- | --- |
+| Strict TypeScript compilation | Passed |
+| Browser compilation | Passed |
+| Manually inspected validator cases | 9/9 |
+| Automated reducer and store assertions | 15/15 |
+| Manual browser functional checks | 17/17 |
+| Previous-day regression execution | Passed |
+
+These checks demonstrate the verified behavior of the learning project but do not represent exhaustive test coverage or production readiness.
+
+**Explore:** [Week 07 module](week-07-typescript/) · [TaskFlow TypeScript source](week-07-typescript/day-06/)
 
 ## Repository organization
 
 ```text
 web-development-roadmap/
 ├── README.md
+├── .gitignore
 ├── week-01-html/
 ├── week-02-css/
 ├── week-03-javascript/
@@ -91,9 +132,16 @@ web-development-roadmap/
 ├── week-05-async-apis/
 │   ├── README.md, notes.md, questions.md, exercises.md
 │   └── day-01/ ... day-06/     # Async exercises and Product Catalog
-└── week-06-advanced-javascript/
-    ├── README.md, notes.md, questions.md, exercises.md
-    └── day-01/ ... day-06/     # Architecture exercises and TaskFlow
+├── week-06-advanced-javascript/
+│   ├── README.md, notes.md, questions.md, exercises.md
+│   └── day-01/ ... day-06/     # Architecture exercises and TaskFlow
+└── week-07-typescript/
+    ├── README.md, notes.md, questions.md
+    ├── package.json
+    ├── package-lock.json
+    ├── tsconfig.json
+    ├── tsconfig.taskflow.json
+    └── day-01/ ... day-06/     # TypeScript exercises and TaskFlow migration
 ```
 
 *The tree is a high-level guide, not an exhaustive file listing. Documentation availability may vary by module.*
@@ -109,14 +157,18 @@ web-development-roadmap/
 - [Week 05 — Product Catalog](week-05-async-apis/day-06/)
 - [Week 06 — Advanced JavaScript & application architecture](week-06-advanced-javascript/)
 - [Week 06 — TaskFlow](week-06-advanced-javascript/day-06/)
+- [Week 07 — TypeScript](week-07-typescript/)
+- [Week 07 — TaskFlow TypeScript Edition](week-07-typescript/day-06/)
 
-**Next module:** Week 07 — TypeScript (not yet published).
+**Next module:** Week 08 — React Fundamentals (not yet published).
 
 ## Engineering and AI-assisted learning approach
 
 The aim is not to collect code snippets or accept generated answers uncritically. My workflow is to understand a concept, implement a small exercise, test behavior, inspect failures, refine the design, and document the outcome. ChatGPT supports this process through explanations, questions, and code-review suggestions; **implementation and verification remain essential**.
 
 This repository documents progress rather than claiming that every example follows production standards. As the roadmap advances, the focus expands from browser fundamentals to typed code, frameworks, server-side engineering, databases, integration, testing, and deployment.
+
+The TypeScript module introduces a more explicit distinction between compile-time type safety and runtime validation. Automated assertions, manual functional testing, and regression execution complement static analysis when verifying application behavior.
 
 ## Expectations and limitations
 
