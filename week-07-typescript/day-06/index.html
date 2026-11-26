@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="TaskFlow - A modular TypeScript task manager.">
+        <title>TaskFlow | Task Manager</title>
+        <link rel="stylesheet" href="styles.css">
+        <script type="module" src="./dist/main.js"></script>
+    </head>
+    <body>
+        <main class="app-container">
+
+            <header class="app-header">
+                <h1>TaskFlow</h1>
+                <p>Organize your work, one task at a time.</p>
+            </header>
+
+            <section class="stats" aria-label="Task statistics">
+                <div class="stat-card">
+                    <span id="total-count">0</span>
+                    <p>Total Tasks</p>
+                </div>
+
+                <div class="stat-card">
+                    <span id="completed-count">0</span>
+                    <p>Completed</p>
+                </div>
+
+                <div class="stat-card">
+                    <span id="pending-count">0</span>
+                    <p>Pending</p>
+                </div>
+            </section>
+
+            <section class="task-form-section" aria-labelledby="form-heading">
+                <h2 id="form-heading">Create a Task</h2>
+                <form id="task-form"novalidate>
+                    <input type="hidden" id="task-id">
+
+                    <div class="form-group">
+                        <label for="task-title">Task Title</label>
+                        <input type="text" id="task-title" name="title" maxlength="100" required placeholder="What needs to be done?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="task-description">
+                            Description(Optional)
+                        </label>
+                        <textarea id="task-description" name="description" rows="3" maxlength="500" placeholder="Add more details..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="task-priority">Priority</label>
+
+                        <select id="task-priority" name="task-priority">
+                            <option value="low">Low</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" id="submit-btn">Add Task</button>
+
+                        <button type="button" id="cancel-edit-btn" class="secondary-btn" hidden>Cancel Edit</button>
+                    </div>
+                </form>
+                <p id="form-error" class="error-message" role="alert" hidden></p>
+
+            </section>
+
+            <section class="task-list-section" aria-labelledby="tasks-heading">
+                <div class="section-header">
+                    <h2 id="tasks-heading">Your Task</h2>
+
+                    <div class="task-controls">
+                        <label for="task-filter">Filter</label>
+                        <select id="task-filter">
+                            <option value="all">All</option>
+                            <option value="active">Active</option>
+                            <option value="completed">Completed</option>
+                        </select>
+
+                        <label for="task-sort">Sort</label>
+                        <select id="task-sort">
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="priority">Priority</option>
+                        </select>
+                    </div>
+                </div>
+
+                <ul id="task-list" class="task-list"></ul>
+                <p id="empty-message" class="empty-message">
+                    No tasks found. Create your first task!
+                </p>
+            </section>
+        </main>
+    </body>
+</html>

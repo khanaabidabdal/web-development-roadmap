@@ -1,0 +1,25 @@
+
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "target": "ES2022",
+        "module": "ES2022",
+        "moduleResolution": "bundler",
+        "lib": ["ES2022", "DOM", "DOM.Iterable"],
+        "rootDir": "./day-06",
+        "outDir": "./day-06/dist",
+        "noEmit": false,
+        "noEmitOnError": true,
+        "declaration": false,
+        "declarationMap": false,
+        "sourceMap": true
+    },
+    "include": [
+        "day-06/**/*.ts"
+    ],
+    "exclude": [
+        "day-06/**/*-test.ts",
+        "day-06/dist",
+        "node_modules"
+    ]
+}

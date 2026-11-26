@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typecheck": "tsc --noEmit",
+    "build:taskflow": "tsc -p tsconfig.taskflow.json",
+    "watch:taskflow": "tsc -p tsconfig.taskflow.json --watch",
+    "test:validators": "tsx day-06/validators-test.ts",
+    "test:core": "tsx day-06/core-test.ts"
   },
   "keywords": [],
   "author": "",
